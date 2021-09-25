@@ -1,8 +1,12 @@
 # SPARQL2Flink-Docker
 This repository contains a step-by-step guide to test the SPARQL2Flink library with docker-compose. The proof of the SPARQL2Flink library reused a subset of the queries defined by the Berlin SPARQL Benchmark (BSBM) [Bizer and Schultz, 2009]. The SPARQL2Flink library does not implement the SPARQL protocol and cannot be used as a SPARQL endpoint. It is important to note that this does not impose a strong limitation to our approach. This is an engineering task that will be supported in the future. For this reason, we do not use the test drive proposed in BSBM.
 
-## Generate datasets from BSBM
-BSBM is built around an e-commerce use case in which a set of products is offered by different vendors while consumers post reviews about the products [Bizer and Schultz, 2009]. Different datasets were generated using the BSBM data generator by setting up the number of products, number of producers, number of vendors, number of offers, and number of triples, as shown in Table 1.
+## Datasets
+One dataset was generated using the BSBM data generator by setting up the number of products, number of producers, number of vendors, number of offers, and number of triples, as shown in Table 1.
+
+| Dataset | Products | Producers | Vendors | Offers | No. Triples |
+|:--------------|:-------------:|--------------:|
+| ds20mb | 209 | 5 | 2 | 4,180 | 78,351 |
 
 ![Image text](/images/queries-citybench-stream.png)
 
