@@ -5,7 +5,7 @@ This repository contains a step-by-step guide to test the SPARQL2Flink library w
 One dataset was generated using the BSBM data generator by setting up the number of products, number of producers, number of vendors, number of offers, and number of triples, as shown in Table 1.
 
 | Dataset | Products | Producers | Vendors | Offers | No. Triples |
-|:--------------|:-------------:|--------------:|
+|:--------------|:-------------:|--------------:|:-------------:|:--------------:|:--------------:|
 | ds20mb | 209 | 5 | 2 | 4,180 | 78,351 |
 
 ![Image text](/images/queries-citybench-stream.png)
