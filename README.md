@@ -18,7 +18,7 @@ Queries Q1, Q2, Q3, Q4, Q5, Q7, Q8, Q9, and Q10 are available in the queries fol
 ## SPARQL2Flink with docker-compose
 The SPARQL2Flink library is composed of two modules, called: Mapper and Runner. The Mapper module transforms a declarative SPARQL query into a DataSet Flink program. This Runner module allows executing a Flink program (as a jar file) on a local cluster.
 
-### Steps to run Mapper module
+### Steps to generate .jar file through Mapper module
 1. Select home directory
 ```
 cd ~/
@@ -27,15 +27,22 @@ cd ~/
 ```
 git clone https://github.com/oscarceballos/sparql2flink-docker.git
 ```
-3. Run the following command to deploy on docker
+3. Run the following command to convert SPARQL query to DataSet Flink program (.jar file)
 ```
-./runner-query.sh 2 queries/query1/query-1.0-SNAPSHOT.jar
+./mapper-query.sh queries/example/query.rq example/
 ```
-3. Run the following command to see the query results
+
+### Steps to run .jar file with SPARQL2Flink on docker-compose
+4. Run the following command to deploy on docker
+```
+./runner-query.sh 2 queries/example/query-1.0-SNAPSHOT.jar dataset.nt
+```
+5. Run the following command to see the query results
 ```
 tail -f /output/Query-Flink-Result
 ``` 
 
+Repeat the previous steps to each query.
 
 ### References
 Bizer, C. and Schultz, A. (2009). The berlin sparql benchmark. Int. J. Semantic Web Inf. Syst., 5:1–24.
