@@ -11,7 +11,7 @@ One dataset in N-Triples format was generated using the BSBM data generator by s
 ## SPARQL query supported by SPARQL2Flink library
 The BSBM offers 12 different SPARQL query templates to emulate the search and navigation pattern of a consumer looking for a product [Bizer and Schultz, 2009]. We modify the query template omitting SPARQL operators and ex- pressions that are not yet implemented in the library. The SPARQL query templates Q1, Q2, Q3, Q4, Q5, Q7, Q8, Q10, and Q11 were instantiated. Table 6.2 summarizes the list of queries that are Supported (S), Partially Supported (PS), and Not Supported (NS) by SPARQL2Flink library. In the case where the query is Partially Supported, it is detailed how the query was modified to be able to transform it into a Flink program.
 
-![Image text](/images/queries-citybench-stream.png)
+![Image text](/images/bsbm-queries-batch.png)
 
 Queries Q1, Q2, Q3, Q4, Q5, Q7, Q8, Q9, and Q10 are available in the queries folder. Each folder contains the query expressed in SPARQL sintax and its corresponding transformation into DataSet Flink program.
 
